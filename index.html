@@ -7,27 +7,46 @@
     body {
       font-family: sans-serif;
       text-align: center;
-      margin-top: 100px;
       background-color: #111;
       color: #fff;
+      margin: 0;
+      padding: 0;
     }
-
     video {
+      width: 80%;
+      margin-top: 40px;
+      border-radius: 12px;
+    }
+    button {
       margin-top: 20px;
-      max-width: 90%;
-      height: auto;
-      border: 2px solid white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
       border-radius: 10px;
+      background-color: #fff;
+      color: #111;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <h1>Hi, du hast den QR-Code gefunden!</h1>
-  <p> ich hab heut Geburtstag, gibst du mir Einen aus? </p>
+  <p> Ich hab heute Geburtstag, gibst du mir einen aus?</p>
 
-  <video autoplay muted loop playsinline>
+  <video id="geheimesVideo" autoplay muted loop playsinline>
     <source src="video.mp4" type="video/mp4">
     Dein Browser unterstützt dieses Video nicht.
   </video>
+
+  <br>
+  <button onclick="toggleSound()">Sound an/aus</button>
+
+  <script>
+    const video = document.getElementById("geheimesVideo");
+    function toggleSound() {
+      video.muted = !video.muted;
+    }
+  </script>
 </body>
 </html>
+
