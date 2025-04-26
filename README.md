@@ -1,2 +1,2 @@
-# Moritz-Pullover
+# Pullover
 Moritz Pullover Beschriftung hehe
